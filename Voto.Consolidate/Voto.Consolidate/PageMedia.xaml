@@ -1,0 +1,47 @@
+﻿<Page x:Class="Voto.Consolidate.PageMedia"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Voto.Consolidate"
+      xmlns:p="clr-namespace:Voto.Consolidate.Properties"
+      mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth ="500" 
+      Title="PageMedia" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True">
+
+    <Grid>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="57*"/>
+        </Grid.RowDefinitions>
+
+
+        <WrapPanel x:Name="WrapPanelPictures" HorizontalAlignment="Left" Grid.Row="2">
+            <CheckBox x:Name="checkBoxBmp" Content=" BMP"  Style="{DynamicResource SimpleCheckBox}" Width="99" Height="16" IsChecked="{Binding Source={x:Static p:Settings.Default}, Path=PicBmpSetting, Mode=TwoWay}" Margin="5"/>
+            <CheckBox x:Name="checkBoxGif" Content=" GIF"  Style="{DynamicResource SimpleCheckBox}" Width="99" Height="16" IsChecked="{Binding Source={x:Static p:Settings.Default}, Path=PicGifSetting, Mode=TwoWay}" Margin="5"/>
+            <CheckBox x:Name="checkBoxJpeg" Content=" JPEG"  Style="{DynamicResource SimpleCheckBox}" Width="99" Height="16" IsChecked="{Binding Source={x:Static p:Settings.Default}, Path=PicJpegSetting, Mode=TwoWay}" Margin="5"/>
+            <CheckBox x:Name="checkBoxJpg" Content=" JPG"  Style="{DynamicResource SimpleCheckBox}" Width="99" Height="16" IsChecked="{Binding Source={x:Static p:Settings.Default}, Path=PicJpgSetting, Mode=TwoWay}" Margin="5"/>
+            <CheckBox x:Name="checkBoxPng" Content=" PNG"  Style="{DynamicResource SimpleCheckBox}" Width="99" Height="16" IsChecked="{Binding Source={x:Static p:Settings.Default}, Path=PicPngSetting, Mode=TwoWay}" Margin="5"/>
+            <CheckBox x:Name="checkBoxPsd" Content=" PSD"  Style="{DynamicResource SimpleCheckBox}" Width="99" Height="16" IsChecked="{Binding Source={x:Static p:Settings.Default}, Path=PicPsdSetting, Mode=TwoWay}" Margin="5"/>
+            <CheckBox x:Name="checkBoxRaw" Content=" RAW"  Style="{DynamicResource SimpleCheckBox}" Width="99" Height="16" IsChecked="{Binding Source={x:Static p:Settings.Default}, Path=PicRawSetting, Mode=TwoWay}" Margin="5"/>
+            <CheckBox x:Name="checkBoxTiff" Content=" TIFF"  Style="{DynamicResource SimpleCheckBox}" Width="99" Height="16" IsChecked="{Binding Source={x:Static p:Settings.Default}, Path=PicTiffSetting, Mode=TwoWay}" Margin="5"/>
+        </WrapPanel>
+        
+        <WrapPanel x:Name="WrapPanelVideos" HorizontalAlignment="Left" Grid.Row="4">
+            <CheckBox x:Name="checkBoxAvi" Content=" AVI"  Style="{DynamicResource SimpleCheckBox}" Width="99" Height="16" IsChecked="{Binding Source={x:Static p:Settings.Default}, Path=VidAviSetting, Mode=TwoWay}" Margin="5"/>
+            <CheckBox x:Name="checkBoxFlv" Content=" FLV"  Style="{DynamicResource SimpleCheckBox}" Width="99" Height="16" IsChecked="{Binding Source={x:Static p:Settings.Default}, Path=VidFlvSetting, Mode=TwoWay}" Margin="5"/>
+            <CheckBox x:Name="checkBoxMov" Content=" MOV"  Style="{DynamicResource SimpleCheckBox}" Width="99" Height="16" IsChecked="{Binding Source={x:Static p:Settings.Default}, Path=VidMovSetting, Mode=TwoWay}" Margin="5"/>
+            <CheckBox x:Name="checkBoxMp4" Content=" MP4"  Style="{DynamicResource SimpleCheckBox}" Width="99" Height="16" IsChecked="{Binding Source={x:Static p:Settings.Default}, Path=VidMp4Setting, Mode=TwoWay}" Margin="5"/>
+            <CheckBox x:Name="checkBoxMpg" Content=" MPG"  Style="{DynamicResource SimpleCheckBox}" Width="99" Height="16" IsChecked="{Binding Source={x:Static p:Settings.Default}, Path=VidMpgSetting, Mode=TwoWay}" Margin="5"/>
+            <CheckBox x:Name="checkBoxMts" Content=" MTS"  Style="{DynamicResource SimpleCheckBox}" Width="99" Height="16" IsChecked="{Binding Source={x:Static p:Settings.Default}, Path=VidMtsSetting, Mode=TwoWay}" Margin="5"/>
+        </WrapPanel>
+
+        <TextBlock x:Name="textBlockDescription" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Select the media types you would like to consolidate." VerticalAlignment="Center" FontFamily="Century Schoolbook" FontSize="14" Margin="0" Foreground="#FF898989"/>
+        <TextBlock x:Name="textBlockPictures" HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Text="Pictures" VerticalAlignment="Center" FontFamily="Century Schoolbook" FontSize="16" FontWeight="Bold" Margin="0,5,0,0"/>
+        <TextBlock x:Name="textBlockVideos" HorizontalAlignment="Left" Grid.Row="3" TextWrapping="Wrap" Text="Videos"  VerticalAlignment="Center" FontFamily="Century Schoolbook" FontSize="16" FontWeight="Bold" Margin="0,5,0,0"/>
+
+    </Grid>
+</Page>

@@ -1,0 +1,54 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Voto.Consolidate"
+      xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" x:Class="Voto.Consolidate.PageConsolidate"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="PageConsolidate" SizeChanged="Page_SizeChanged">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="158*"/>
+            <ColumnDefinition Width="77"/>
+            <ColumnDefinition Width="65*"/>
+        </Grid.ColumnDefinitions>
+        <ProgressBar x:Name="ProgressBarComplete" Margin="30,8,30,8" Grid.Row="6" Style="{DynamicResource SimpleProgressBar}" Height="15" BorderThickness="0,1,1,1" SmallChange="1" BorderBrush="#FF06B025"/>
+        <ProgressBar x:Name="ProgressBarRunning" Margin="30,8,30,8" Grid.Row="6" Grid.Column="0" Height="5" Foreground="#A0800080" BorderThickness="0" SmallChange="1" Background="{x:Null}"/>
+
+        <TextBlock x:Name="textBlockCount" Grid.Row="0" Grid.Column="1" TextWrapping="Wrap" Text="Count" FontFamily="Century Schoolbook" FontSize="14" Foreground="#FF898989" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBlock x:Name="textBlockSuccess" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" Text="Successful" FontFamily="Century Schoolbook" FontSize="14" Foreground="#FF898989" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBlock x:Name="textBlockFailed" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" Text="Failed" FontFamily="Century Schoolbook" FontSize="14" Foreground="#FF898989" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBlock x:Name="textBlockSkipped" Grid.Row="3" Grid.Column="1" TextWrapping="Wrap" Text="Skipped" FontFamily="Century Schoolbook" FontSize="14" Foreground="#FF898989" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBlock x:Name="textBlockSpeed" Grid.Row="4" Grid.Column="1" TextWrapping="Wrap" Text="Speed bps" FontFamily="Century Schoolbook" FontSize="14" Foreground="#FF898989" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBlock x:Name="textBlockTotalBytes" Grid.Row="5" Grid.Column="1" TextWrapping="Wrap" Text="Total Bytes" FontFamily="Century Schoolbook" FontSize="14" Foreground="#FF898989" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBlock x:Name="textBlockComplete" Grid.Row="6" Grid.Column="1" TextWrapping="Wrap" Text="Complete" FontFamily="Century Schoolbook" FontSize="14" Foreground="#FF898989" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBlock x:Name="textBlockText" Grid.Row="5" Grid.Column="0" TextWrapping="Wrap" Text="" FontSize="10" VerticalAlignment="Bottom"/>
+        <TextBlock x:Name="textBlockText2" Grid.Row="6" Grid.Column="0" TextWrapping="Wrap" Text="" FontSize="10" VerticalAlignment="Top"/>
+
+
+        <Label x:Name="labelCount"  Grid.Column="2" Grid.Row="0" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Center" d:LayoutOverrides="Width" HorizontalAlignment="Center"/>
+        <Label x:Name="labelSuccess"  Grid.Column="2" Grid.Row="1" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Center" d:LayoutOverrides="Width" HorizontalAlignment="Center"/>
+        <Label x:Name="labelFailed"  Grid.Column="2" Grid.Row="2" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Center" d:LayoutOverrides="Width" HorizontalAlignment="Center"/>
+        <Label x:Name="labelSkipped"  Grid.Column="2" Grid.Row="3" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Center" d:LayoutOverrides="Width" HorizontalAlignment="Center"/>
+        <Label x:Name="labelSpeed"  Grid.Column="2" Grid.Row="4" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Center" d:LayoutOverrides="Width" HorizontalAlignment="Center"/>
+        <Label x:Name="labelTotalBytes"  Grid.Column="2" Grid.Row="5" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Center" d:LayoutOverrides="Width" HorizontalAlignment="Center"/>
+        <Label x:Name="labelComplete"  Grid.Column="2" Grid.Row="6" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Center" d:LayoutOverrides="Width" HorizontalAlignment="Center"/>
+
+        <Canvas x:Name="CanvasMain" Margin="5,0,5,0" Grid.Row="1" Grid.RowSpan="4"/>
+
+
+    </Grid>
+</Page>
