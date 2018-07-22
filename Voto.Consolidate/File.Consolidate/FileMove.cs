@@ -11,12 +11,12 @@ namespace File.Consolidate
         public bool DeleteEmptyDirectories { get; set; }
         public bool DeleteDuplicateFiles { get; set; } //deletes file from source side
 
-        public void SyncronousMove()
+        public void SynchronousMove()
         {
             MoveDirectory(SourceDirectory, DestinationDirectory, Progress, SubDirectoriesFlag);
         }
 
-        public async void AsyncronousMove()
+        public async void AsynchronousMove()
         {
             await Task.Run(() => MoveDirectory(SourceDirectory, DestinationDirectory, Progress, SubDirectoriesFlag));
         }

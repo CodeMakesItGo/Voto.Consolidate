@@ -23,7 +23,7 @@ namespace File.Consolidate
             Cancel = true;
         }
 
-        public void SyncronousDownload(string source, string cookies, string fileName, long fileSize, DateTime fileTime)
+        public void SynchronousDownload(string source, string cookies, string fileName, long fileSize, DateTime fileTime)
         {
             if (Directory.Exists(DestinationDirectory) == false)
             {

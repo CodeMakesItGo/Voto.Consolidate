@@ -10,12 +10,12 @@ namespace File.Consolidate
         public bool OverwriteFlag { get; set; }
 
 
-        public void SyncronousCopy()
+        public void SynchronousCopy()
         {
             CopyDirectory(SourceDirectory, DestinationDirectory, Progress, SubDirectoriesFlag, OverwriteFlag);
         }
 
-        public async void AsyncronousCopy()
+        public async void AsynchronousCopy()
         {
             await Task.Run(() => CopyDirectory(SourceDirectory, DestinationDirectory, Progress, SubDirectoriesFlag,
                 OverwriteFlag));

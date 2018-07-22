@@ -147,7 +147,7 @@ namespace Voto.Consolidate
                 };
 
                 _fileOperation.ProgressEvent += PageConsolidate.ProgressReport;
-                ((FileMove) _fileOperation).SyncronousMove();
+                ((FileMove) _fileOperation).SynchronousMove();
             }
 
             FileOperationComplete();
@@ -186,7 +186,7 @@ namespace Voto.Consolidate
 
 
                 _fileOperation.ProgressEvent += PageConsolidate.ProgressReport;
-                ((FileCopy) _fileOperation).SyncronousCopy();
+                ((FileCopy) _fileOperation).SynchronousCopy();
             }
 
             var albums = PageSettings.GetGoogleAlbums();
@@ -223,7 +223,7 @@ namespace Voto.Consolidate
                         var url = PageSettings.GetGooglePhotoUrl(album.id, photo.id);
                         if (string.IsNullOrEmpty(url)) continue;
 
-                        ((UrlCopy) _fileOperation).SyncronousDownload(url, cookies, photo.title, long.Parse(photo.size),
+                        ((UrlCopy) _fileOperation).SynchronousDownload(url, cookies, photo.title, long.Parse(photo.size),
                             photo.timeStamp);
                     }
                 }
