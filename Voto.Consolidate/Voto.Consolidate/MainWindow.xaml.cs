@@ -147,7 +147,7 @@ namespace Voto.Consolidate
                 };
 
                 _fileOperation.ProgressEvent += PageConsolidate.ProgressReport;
-                ((FileMove) _fileOperation).SynchronousMove();
+                ((FileMove) _fileOperation).SyncronousMove();
             }
 
             FileOperationComplete();
@@ -186,12 +186,12 @@ namespace Voto.Consolidate
 
 
                 _fileOperation.ProgressEvent += PageConsolidate.ProgressReport;
-                ((FileCopy) _fileOperation).SynchronousCopy();
+                ((FileCopy) _fileOperation).SyncronousCopy();
             }
 
             var albums = PageSettings.GetGoogleAlbums();
 
-            if (albums.Count > 0)
+            if (albums != null && albums.Count > 0)
             {
                 var cookies = PageSettings.GetGoogleCookies();
 
@@ -223,7 +223,7 @@ namespace Voto.Consolidate
                         var url = PageSettings.GetGooglePhotoUrl(album.id, photo.id);
                         if (string.IsNullOrEmpty(url)) continue;
 
-                        ((UrlCopy) _fileOperation).SynchronousDownload(url, cookies, photo.title, long.Parse(photo.size),
+                        ((UrlCopy) _fileOperation).SyncronousDownload(url, cookies, photo.title, long.Parse(photo.size),
                             photo.timeStamp);
                     }
                 }

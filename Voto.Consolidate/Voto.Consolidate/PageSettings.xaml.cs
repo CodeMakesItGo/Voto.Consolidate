@@ -40,7 +40,7 @@ namespace Voto.Consolidate
 
         public List<WindowGoogleLogin.Album> GetGoogleAlbums()
         {
-            return wgl._albums;
+            return wgl?._albums;
         }
 
         public string GetGoogleCookies()
